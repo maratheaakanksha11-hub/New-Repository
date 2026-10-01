@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Shopping Website</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: white;
+            display: inline-block;
+            width: 200px;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #cart {
+            background-color: white;
+            margin: 30px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🛒 My Shopping Website</h1>
+
+    <div class="product">
+        <h2>T-Shirt</h2>
+        <p>Price: ₹500</p>
+        <button onclick="addToCart(500)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h2>Shoes</h2>
+        <p>Price: ₹1000</p>
+        <button onclick="addToCart(1000)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <h2>Watch</h2>
+        <p>Price: ₹800</p>
+        <button onclick="addToCart(800)">Add to Cart</button>
+    </div>
+
+    <div id="cart">
+        <h2>🛒 Cart</h2>
+        <p>Total: ₹<span id="total">0</span></p>
+    </div>
+
+    <script>
+        let total = 0;
+
+        function addToCart(price) {
+            total = total + price;
+            document.getElementById("total").innerHTML = total;
+        }
+    </script>
+
+</body>
+</html>
